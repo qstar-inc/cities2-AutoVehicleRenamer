@@ -15,27 +15,27 @@ Renames vehicles to include it's origin information.
 * Selectable formatting
 
 ## What does it rename?
-* Service Vehicles
- * Agent Car
- * Ambulance
- * Evacuation Bus
- * Police Car
- * Police Helicopter
- * Fire Engine
- * Firefighting Helicopter
- * Medical Helicopter
- * Park Maintenance Vehicle
- * Prison Van
- * Garbage Truck
- * Snowplow
-* Public Transport &amp; Cargo
- * Aircrafts
- * Buses
- * Subways
- * Taxis
- * Trains
- * Trams
- * Watercrafts
+### Service Vehicles
+* Agent Car
+* Ambulance
+* Evacuation Bus
+* Police Car
+* Police Helicopter
+* Fire Engine
+* Firefighting Helicopter
+* Medical Helicopter
+* Park Maintenance Vehicle
+* Prison Van
+* Garbage Truck
+* Snowplow
+### Public Transport &amp; Cargo
+* Aircrafts
+* Buses
+* Subways
+* Taxis
+* Trains
+* Trams
+* Watercrafts
 
 ### What does it not rename?
 * Personal Vehicles
