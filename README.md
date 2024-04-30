@@ -15,7 +15,7 @@ Renames vehicles to include it's origin information.
 * Selectable formatting
 
 ## What does it rename?
-### Service Vehicles
+#### Service Vehicles
 * Agent Car
 * Ambulance
 * Evacuation Bus
@@ -28,7 +28,7 @@ Renames vehicles to include it's origin information.
 * Prison Van
 * Garbage Truck
 * Snowplow
-### Public Transport &amp; Cargo
+#### Public Transport &amp; Cargo
 * Aircrafts
 * Buses
 * Subways
