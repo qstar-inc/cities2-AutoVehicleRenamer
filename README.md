@@ -57,6 +57,6 @@ Find me on Cities: Skylines Official Discord or Cities: Skylines Modding Discord
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/qstar-inc/cities2-AutoVehicleRenamer/master/Properties/Screenshots/02_Crematorium_.jpg)
-![App Screenshot](https://raw.githubusercontent.com/qstar-inc/cities2-AutoVehicleRenamer/master/Properties/Screenshots/03_Vehicles_.jpg)
-![App Screenshot](https://raw.githubusercontent.com/qstar-inc/cities2-AutoVehicleRenamer/master/Properties/Screenshots/04_Options_.jpg)
+![App Screenshot](https://raw.githubusercontent.com/qstar-inc/cities2-AutoVehicleRenamer/master/Properties/Screenshots/02_Crematorium.jpg)
+![App Screenshot](https://raw.githubusercontent.com/qstar-inc/cities2-AutoVehicleRenamer/master/Properties/Screenshots/03_Vehicles.jpg)
+![App Screenshot](https://raw.githubusercontent.com/qstar-inc/cities2-AutoVehicleRenamer/master/Properties/Screenshots/04_Options.jpg)
