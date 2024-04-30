@@ -51,9 +51,11 @@ Find me on Cities: Skylines Official Discord or Cities: Skylines Modding Discord
 ## Author
 - [StarQ](https://www.github.com/qstar-inc)
 
-## Discussion
-* Cities: Skylines Official Discord ([Invitation](https://discord.gg/citiesskylines))
-* [Cities: Skylines Modding Discord](https://discord.com/channels/1024242828114673724/1234887506336682065) ([Invitation](https://discord.gg/q3dzd4p5Hx))
+## Find me here:
+* Discussion on [Cities: Skylines Modding Discord](https://discord.com/channels/1024242828114673724/1234887506336682065) ([Invitation](https://discord.gg/q3dzd4p5Hx))
+* [Cities: Skylines Official Discord](https://discord.gg/citiesskylines)
+* [StarQ Discord](https://discord.gg/U2PSjUzUuF)
+* [StarQ YouTube](https://www.youtube.com/@StarQGaming)
 
 ## Screenshots
 

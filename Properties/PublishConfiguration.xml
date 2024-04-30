@@ -3,14 +3,15 @@
 <!-- StarQ 2024 -->
 <Publish>
 	<!--Id must be set in order to update existed mod. it is not required for publishing mod for the first time-->
-	<ModId Value="" />
+	<ModId Value="79872" />
 	<!--Name of the mod to display to players-->
-	<DisplayName Value="AutoVehicleRenamer" />
+	<DisplayName Value="Auto Vehicle Renamer" />
 	<!--Short description of the mod-->
 	<ShortDescription Value="Automatically renames vehicles to include it's origin information on spawn" />
 	<!--Long description of the mod. Single line or multi line. Supports minimal markdown subset-->
 	<!--LongDescription Value="This is a long description" /-->
 	<LongDescription>
+# Auto Vehicle Renamer
 This mod renames most vehicles with it's origin information when it spawns.
 
 ## Features
@@ -20,25 +21,26 @@ This mod renames most vehicles with it's origin information when it spawns.
 * Selectable formatting
 
 ## What does it rename?
-* Service Vehicles
-** Ambulance
-** Police Car
-** Police Helicopter
-** Fire Engine
-** Firefighting Helicopter
-** Medical Helicopter
-** Park Maintenance Vehicle
-** Prison Van
-** Garbage Truck
-** Snowplow
-* Public Transport &amp; Cargo
-** Aircrafts
-** Bus
-** Subways
-** Taxi
-** Trains
-** Trams
-** Watercrafts
+#### Service Vehicles:
+* Ambulance
+* Fire Engine
+* Firefighting Helicopter
+* Garbage Truck
+* Medical Helicopter
+* Park Maintenance Vehicle
+* Police Car
+* Police Helicopter
+* Post Van
+* Prison Van
+* Snowplow
+#### Public Transport &amp; Cargo
+* Aircrafts
+* Bus
+* Subways
+* Taxi
+* Trains
+* Trams
+* Watercrafts
 
 ### What does it not rename?
 * Personal Vehicles
@@ -51,18 +53,18 @@ ____
 * Safe to add to existing save.
 * Safe to remove anytime. (Existing renames will exist until the vehicle despawns)
 
-Find me on Cities: Skylines Official Discord or Cities: Skylines Modding Discord.
-
-## Discussion
-* Cities: Skylines Official Discord ([Invitation](https://discord.gg/citiesskylines))
-* [Cities: Skylines Modding Discord](https://discord.com/channels/add-links) ([Invitation](https://discord.gg/q3dzd4p5Hx))
+## Find me here:
+* Discussion on [Cities: Skylines Modding Discord](https://discord.com/channels/1024242828114673724/1234887506336682065) ([Invitation](https://discord.gg/q3dzd4p5Hx))
+* [Cities: Skylines Official Discord](https://discord.gg/citiesskylines)
+* [StarQ Discord](https://discord.gg/U2PSjUzUuF)
+* [StarQ YouTube](https://www.youtube.com/@StarQGaming)
 
 The in-game browser doesn't support links. Use the web version to click on the links.
 	</LongDescription>
 	<!--Thumbnail-->
 	<Thumbnail Value="Properties/Thumbnail.png" />
 	<!--Screenshot, can be set multiple times-->
-	<Screenshot Value="Properties/Screenshots/02_Crematorium.jpg" />
+	<Screenshot Value="Properties/Screenshots/02_CrematoriumX.jpg" />
 	<Screenshot Value="Properties/Screenshots/03_Vehicles.jpg" />
 	<Screenshot Value="Properties/Screenshots/04_Options.jpg" />
 	<!--Tag, can be set multiple times-->
@@ -76,9 +78,10 @@ The in-game browser doesn't support links. Use the web version to click on the l
 	<!--Dependency for the mod, can be set multiple times-->
 	<Dependency Id="" />
 	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
-	<ChangeLog Value="" />
-	<!--ChangeLog>
-	</ChangeLog-->
+	<ChangeLog Value="1.0" />
+	<ChangeLog>
+-
+	</ChangeLog>
 	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon-->
 	<ExternalLink Type="discord" Url="https://discord.com/channels/1024242828114673724/1234887506336682065" />
 	<ExternalLink Type="github" Url="https://github.com/qstar-inc/cities2-AutoVehicleRenamer" />
