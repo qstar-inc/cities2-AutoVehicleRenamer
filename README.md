@@ -9,7 +9,7 @@ ___
 Renames vehicles to include it's origin information.
 
 ## Features
-* Automatically renames vehicles from buildings with custom names
+* Automatically renames vehicles from buildings with custom names or from outside connections
 * Optional renaming of vehicles from buildings with default names
 * Customizable separator
 * Selectable formatting
