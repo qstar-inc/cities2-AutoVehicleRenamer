@@ -22,7 +22,9 @@ This mod renames most vehicles with it's origin information when it spawns.
 
 ## What does it rename?
 #### Service Vehicles:
+* Agent Car
 * Ambulance
+* Evacuation Bus
 * Fire Engine
 * Firefighting Helicopter
 * Garbage Truck

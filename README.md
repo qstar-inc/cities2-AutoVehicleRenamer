@@ -16,31 +16,31 @@ Renames vehicles to include it's origin information.
 
 ## What does it rename?
 * Service Vehicles
-** Ambulance
-** Police Car
-** Police Helicopter
-** Fire Engine
-** Firefighting Helicopter
-** Medical Helicopter
-** Park Maintenance Vehicle
-** Prison Van
-** Garbage Truck
-** Snowplow
+ * Agent Car
+ * Ambulance
+ * Evacuation Bus
+ * Police Car
+ * Police Helicopter
+ * Fire Engine
+ * Firefighting Helicopter
+ * Medical Helicopter
+ * Park Maintenance Vehicle
+ * Prison Van
+ * Garbage Truck
+ * Snowplow
 * Public Transport &amp; Cargo
-** Aircrafts
-** Bus
-** Subways
-** Taxi
-** Trains
-** Trams
-** Watercrafts
+ * Aircrafts
+ * Buses
+ * Subways
+ * Taxis
+ * Trains
+ * Trams
+ * Watercrafts
 
 ### What does it not rename?
 * Personal Vehicles
 * Delivery Trucks
 * Specialized Industry Vehicles
-
-____
 
 ## Removal
 * Safe to add to existing save.
@@ -59,6 +59,6 @@ Find me on Cities: Skylines Official Discord or Cities: Skylines Modding Discord
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/qstar-inc/cities2-AutoVehicleRenamer/master/Properties/Screenshots/02_Crematorium.jpg)
+![App Screenshot](https://raw.githubusercontent.com/qstar-inc/cities2-AutoVehicleRenamer/master/Properties/Screenshots/02_CrematoriumX.jpg)
 ![App Screenshot](https://raw.githubusercontent.com/qstar-inc/cities2-AutoVehicleRenamer/master/Properties/Screenshots/03_Vehicles.jpg)
 ![App Screenshot](https://raw.githubusercontent.com/qstar-inc/cities2-AutoVehicleRenamer/master/Properties/Screenshots/04_Options.jpg)
