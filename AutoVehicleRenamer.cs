@@ -15,29 +15,28 @@ namespace AutoVehicleRenamer
     public partial class AutoVehicleRenamer : GameSystemBase
     {
         private NameSystem nameSystem;
-        private EntityQuery _query;
+        private EntityQuery vehicleQuery;
 
         protected override void OnCreate()
         {
             base.OnCreate();
 
-            _query = GetEntityQuery(new EntityQueryDesc()
+            vehicleQuery = GetEntityQuery(new EntityQueryDesc()
             {
-                All = [
+                All = new[] {
                     ComponentType.ReadOnly<Game.Vehicles.Vehicle>(),
                     ComponentType.ReadOnly<Owner>(),
                     ComponentType.ReadOnly<Created>()
-                ],
-                None =
-                [
+                },
+                None = new[] {
                     ComponentType.ReadOnly<Game.Vehicles.WorkVehicle>(),
                     ComponentType.ReadOnly<Game.Vehicles.DeliveryTruck>(),
                     ComponentType.ReadOnly<Game.Vehicles.PersonalCar>(),
                     ComponentType.ReadOnly<Deleted>(),
                     ComponentType.ReadOnly<Temp>()
-                ]
+                }
             });
-            RequireForUpdate(_query);
+            RequireForUpdate(vehicleQuery);
 
             nameSystem = World.DefaultGameObjectInjectionWorld.GetOrCreateSystemManaged<NameSystem>();
         }
@@ -52,13 +51,13 @@ namespace AutoVehicleRenamer
         {
             try
             {
-                var m_Setting = Mod.m_Setting;
+                var setting = Mod.m_Setting;
 
-                bool enableDefaults = m_Setting.enableDefault;
-                string separator = m_Setting.separator;
-                bool enableVerbose = m_Setting.enableVerbose;
+                bool enableDefaults = setting.EnableDefault;
+                string separator = setting.Separator;
+                bool enableVerbose = setting.EnableVerbose;
 
-                var vehicles = _query.ToEntityArray(Allocator.Temp);
+                var vehicles = vehicleQuery.ToEntityArray(Allocator.Temp);
 
                 foreach (var entity in vehicles)
                 {
@@ -66,11 +65,11 @@ namespace AutoVehicleRenamer
                     switch (vehicleName)
                     {
                         case "Park Maintenance Vehicle":
-                            if (enableVerbose) { Mod.log.Info("Found \"Park Maintenance Vehicle\", using \"Park MV\""); }
+                            if (enableVerbose) Mod.log.Info("Found \"Park Maintenance Vehicle\", using \"Park MV\"");
                             vehicleName = "Park MV";
                             break;
                         case "Road Maintenance Vehicle":
-                            if (enableVerbose) { Mod.log.Info("Found \"Road Maintenance Vehicle\", using \"Road MV\""); }
+                            if (enableVerbose) Mod.log.Info("Found \"Road Maintenance Vehicle\", using \"Road MV\"");
                             vehicleName = "Road MV";
                             break;
                         default:
@@ -94,16 +93,15 @@ namespace AutoVehicleRenamer
                     }
                     if (buildingName != "")
                     {
-                        string format = m_Setting.textFormat.ToString();
+                        string format = setting.TextFormat.ToString();
                         switch (format)
                         {
                             case "Value1":
-                                if (enableVerbose) { Mod.log.Info($"Renaming \"{entity}\" to \"{vehicleName} {separator} {buildingName}\""); }
+                                if (enableVerbose) Mod.log.Info($"Renaming \"{entity}\" to \"{vehicleName} {separator} {buildingName}\"");
                                 nameSystem.SetCustomName(entity, $"{vehicleName} {separator} {buildingName}");
                                 break;
                             case "Value2":
-                                if (enableVerbose) { Mod.log.Info($"Renaming \"{entity}\" to \"{buildingName} {separator} {vehicleName}\""); }
-                                nameSystem.SetCustomName(entity, $"{buildingName} {separator} {vehicleName}");
+                                if (enableVerbose) Mod.log.Info($"Renaming \"{entity}\" to \"{buildingName} {separator} {vehicleName}\"");                                nameSystem.SetCustomName(entity, $"{buildingName} {separator} {vehicleName}");
                                 break;
                             default:
                                 break;
@@ -112,10 +110,6 @@ namespace AutoVehicleRenamer
                     }
                 }
             } catch (Exception ex) { Mod.log.Info(ex); }
-        }
-
-        protected override void OnDestroy()
-        {
         }
     }
 }
