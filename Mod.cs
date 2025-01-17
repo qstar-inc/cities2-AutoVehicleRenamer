@@ -19,14 +19,13 @@ namespace AutoVehicleRenamer
 
         public void OnLoad(UpdateSystem updateSystem)
         {
-            if (m_Setting.EnableVerbose) log.Info("Auto Vehicle Renamer loaded successfully");
-
             m_Setting = new Setting(this);
             m_Setting.RegisterInOptionsUI();
             GameManager.instance.localizationManager.AddSource("en-US", new LocaleEN(m_Setting));
 
             AssetDatabase.global.LoadSettings(nameof(AutoVehicleRenamer), m_Setting, new Setting(this));
 
+            if (m_Setting.EnableVerbose) log.Info("Auto Vehicle Renamer loaded successfully");
             updateSystem.UpdateAt<AutoVehicleRenamer>(SystemUpdatePhase.UIUpdate);
             if (m_Setting.EnableVerbose) log.Info("Verbose logging is enabled. Disable it in Settings if you're not debugging.");
         }
