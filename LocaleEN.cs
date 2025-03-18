@@ -18,10 +18,13 @@ namespace AutoVehicleRenamer
         {
             return new Dictionary<string, string>
             {
-                { m_Setting.GetSettingsLocaleID(), "Auto Vehicle Renamer" },
+                { m_Setting.GetSettingsLocaleID(), Mod.Name },
                 { m_Setting.GetOptionTabLocaleID(Setting.MainSection), "Main" },
                 { m_Setting.GetOptionGroupLocaleID(Setting.GeneralOptions), "General" },
                 { m_Setting.GetOptionGroupLocaleID(Setting.Actions), "Actions" },
+
+                { m_Setting.GetOptionLabelLocaleID(nameof(Setting.ApplyToAll)), "Apply to all Vehicles" },
+                { m_Setting.GetOptionDescLocaleID(nameof(Setting.ApplyToAll)), $"Apply the selected settings to all vehicles on the current save." },
 
                 { m_Setting.GetOptionLabelLocaleID(nameof(Setting.EnableDefault)), "Rename vehicles from buildings with default names?" },
                 { m_Setting.GetOptionDescLocaleID(nameof(Setting.EnableDefault)), $"By default, buildings with default names such as \"Bus Depot\" or \"Rail Yard\" won't be renamed. Enable this to allow renames of vehicles from buildings with default names." },
@@ -41,6 +44,7 @@ namespace AutoVehicleRenamer
                 { m_Setting.GetOptionLabelLocaleID(nameof(Setting.EnableVerbose)), "Enable Verbose Logging" },
                 { m_Setting.GetOptionDescLocaleID(nameof(Setting.EnableVerbose)), $"Only enable for debugging. Not recommended for gameplay." },
 
+                { m_Setting.GetOptionTabLocaleID(Setting.AboutTab), "About" },
                 { m_Setting.GetOptionLabelLocaleID(nameof(Setting.NameText)), "Mod Name" },
                 { m_Setting.GetOptionDescLocaleID(nameof(Setting.NameText)), "" },
                 { m_Setting.GetOptionLabelLocaleID(nameof(Setting.VersionText)), "Mod Version" },

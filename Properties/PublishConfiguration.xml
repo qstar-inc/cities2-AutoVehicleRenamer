@@ -1,15 +1,7 @@
-﻿<!-- AutoVehicleRenamer.cs -->
-<!-- https://github.com/qstar-inc/cities2-AutoVehicleRenamer -->
-<!-- StarQ 2024 -->
-<Publish>
-	<!--Id must be set in order to update existed mod. it is not required for publishing mod for the first time-->
+﻿<Publish>
 	<ModId Value="79872" />
-	<!--Name of the mod to display to players-->
 	<DisplayName Value="Auto Vehicle Renamer" />
-	<!--Short description of the mod-->
 	<ShortDescription Value="Automatically renames vehicles to include it's origin information on spawn" />
-	<!--Long description of the mod. Single line or multi line. Supports minimal markdown subset-->
-	<!--LongDescription Value="This is a long description" /-->
 	<LongDescription>
 # Auto Vehicle Renamer
 This mod renames most vehicles with it's origin information when it spawns.
@@ -24,6 +16,7 @@ This mod renames most vehicles with it's origin information when it spawns.
 #### Service Vehicles:
 * Agent Car
 * Ambulance
+* Delivery Trucks
 * Evacuation Bus
 * Fire Engine
 * Firefighting Helicopter
@@ -46,45 +39,26 @@ This mod renames most vehicles with it's origin information when it spawns.
 
 ### What does it not rename?
 * Personal Vehicles
-* Delivery Trucks
 * Specialized Industry Vehicles
 
-____
-
-## Removal
-* Safe to add to existing save.
+## DISCLAIMER
+* Safe to add to existing save. (Button in Options can be used to rename all vehicles on the map)
 * Safe to remove anytime. (Existing renames will exist until the vehicle despawns)
-
-## Find me here:
-* Discussion on [Cities: Skylines Modding Discord](https://discord.com/channels/1024242828114673724/1234887506336682065) ([Invitation](https://discord.gg/q3dzd4p5Hx))
-* [Cities: Skylines Official Discord](https://discord.gg/citiesskylines)
-* [StarQ Discord](https://discord.gg/U2PSjUzUuF)
-* [StarQ YouTube](https://www.youtube.com/@StarQGaming)
-
-The in-game browser doesn't support links. Use the web version to click on the links.
 	</LongDescription>
-	<!--Thumbnail-->
 	<Thumbnail Value="Properties/Thumbnail.png" />
-	<!--Screenshot, can be set multiple times-->
 	<Screenshot Value="Properties/Screenshots/02_CrematoriumX.jpg" />
 	<Screenshot Value="Properties/Screenshots/03_Vehicles.jpg" />
 	<Screenshot Value="Properties/Screenshots/04_Options.jpg" />
-	<!--Tag, can be set multiple times-->
 	<Tag Value="" />
-	<!--Link to the forum post where the mod can be discussed-->
 	<ForumLink Value="" />
-	<!--Version of the mod-->
-	<ModVersion Value="1.0.4" />
-	<!--Recommended version of the base game to use the mod-->
+	<ModVersion Value="1.1.0" />
 	<GameVersion Value="1.2.*" />
-	<!--Dependency for the mod, can be set multiple times-->
 	<Dependency Id="" />
-	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
-	<!--ChangeLog Value="1.0.2" /-->
 	<ChangeLog>
-* Hotfix
+- Recompiled for 1.2.5f1.
+- Add support for Delivery Vans.
+- Add button in Options to rename all vehicles currently on the map.
 	</ChangeLog>
-	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon-->
-	<ExternalLink Type="discord" Url="https://discord.com/channels/1024242828114673724/1234887506336682065" />
+	<ExternalLink Type="discord" Url="https://discord.gg/U2PSjUzUuF" />
 	<ExternalLink Type="github" Url="https://github.com/qstar-inc/cities2-AutoVehicleRenamer" />
 </Publish>

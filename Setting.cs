@@ -8,6 +8,7 @@ using Game.Settings;
 using Game.UI.Widgets;
 using System;
 using System.Collections.Generic;
+using Unity.Entities;
 using UnityEngine.Device;
 
 namespace AutoVehicleRenamer
@@ -25,9 +26,24 @@ namespace AutoVehicleRenamer
         public const string AboutTab = "About";
         public const string InfoGroup = "Info";
 
+        public AutoVehicleRenamer avr = World.DefaultGameObjectInjectionWorld.GetOrCreateSystemManaged<AutoVehicleRenamer>();
+
         public Setting(IMod mod) : base(mod)
         {
             SetDefaults();
+        }
+        [SettingsUIHidden]
+        public bool IsInGameOrEditor { get; set; } = false;
+
+        [SettingsUIButton]
+        [SettingsUISection(MainSection, Actions)]
+        [SettingsUIDisableByCondition(typeof(Setting), nameof(IsInGameOrEditor), true)]
+        public bool ApplyToAll
+        {
+            set
+            {
+                avr.UpdateVehicleName(true);
+            }
         }
 
         [SettingsUISection(MainSection, GeneralOptions)]
