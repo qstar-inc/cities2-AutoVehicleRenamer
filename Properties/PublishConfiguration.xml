@@ -51,13 +51,12 @@ This mod renames most vehicles with it's origin information when it spawns.
 	<Screenshot Value="Properties/Screenshots/04_Options.jpg" />
 	<Tag Value="" />
 	<ForumLink Value="" />
-	<ModVersion Value="1.1.0" />
+	<ModVersion Value="1.1.1" />
 	<GameVersion Value="1.2.*" />
 	<Dependency Id="" />
 	<ChangeLog>
-- Recompiled for 1.2.5f1.
-- Add support for Delivery Vans.
-- Add button in Options to rename all vehicles currently on the map.
+- Add BurstCompile job for better performance in large cities.
+- Fix unwanted recurvise pattern on vehicle name.
 	</ChangeLog>
 	<ExternalLink Type="discord" Url="https://discord.gg/U2PSjUzUuF" />
 	<ExternalLink Type="github" Url="https://github.com/qstar-inc/cities2-AutoVehicleRenamer" />
