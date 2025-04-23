@@ -2,12 +2,12 @@
 // https://github.com/qstar-inc/cities2-AutoVehicleRenamer
 // StarQ 2024
 
+using System;
+using System.Collections.Generic;
 using Colossal.IO.AssetDatabase;
 using Game.Modding;
 using Game.Settings;
 using Game.UI.Widgets;
-using System;
-using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine.Device;
 
@@ -26,12 +26,15 @@ namespace AutoVehicleRenamer
         public const string AboutTab = "About";
         public const string InfoGroup = "Info";
 
-        public AutoVehicleRenamer avr = World.DefaultGameObjectInjectionWorld.GetOrCreateSystemManaged<AutoVehicleRenamer>();
+        public AutoVehicleRenamer avr =
+            World.DefaultGameObjectInjectionWorld.GetOrCreateSystemManaged<AutoVehicleRenamer>();
 
-        public Setting(IMod mod) : base(mod)
+        public Setting(IMod mod)
+            : base(mod)
         {
             SetDefaults();
         }
+
         [SettingsUIHidden]
         public bool IsInGameOrEditor { get; set; } = false;
 
@@ -40,10 +43,7 @@ namespace AutoVehicleRenamer
         [SettingsUIDisableByCondition(typeof(Setting), nameof(IsInGameOrEditor), true)]
         public bool ApplyToAll
         {
-            set
-            {
-                avr.UpdateVehicleName(true);
-            }
+            set { avr.UpdateVehicleName(true); }
         }
 
         [SettingsUISection(MainSection, GeneralOptions)]
@@ -62,11 +62,7 @@ namespace AutoVehicleRenamer
 
             for (var i = 0; i < 3; i += 1)
             {
-                items.Add(new DropdownItem<int>()
-                {
-                    value = i,
-                    displayName = i.ToString(),
-                });
+                items.Add(new DropdownItem<int>() { value = i, displayName = i.ToString() });
             }
 
             return items.ToArray();
@@ -83,26 +79,18 @@ namespace AutoVehicleRenamer
         [SettingsUISection(MainSection, Actions)]
         public bool RestoreDefaults
         {
-            set
-            {
-                SetDefaults();
-            }
+            set { SetDefaults(); }
         }
 
         [SettingsUISection(MainSection, Actions)]
         public bool EnableVerbose { get; set; }
 
-        [SettingsUIHidden]
-        public bool DummySetting { get; set; }
-
-
         public override void SetDefaults()
         {
-            EnableDefault = false;
+            EnableDefault = true;
             Separator = "•";
             TextFormat = TextFormatEnum.Value1;
             EnableVerbose = false;
-            DummySetting = true;
         }
 
         [SettingsUISection(AboutTab, InfoGroup)]

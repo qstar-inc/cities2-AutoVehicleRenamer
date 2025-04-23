@@ -49,14 +49,14 @@ This mod renames most vehicles with it's origin information when it spawns.
 	<Screenshot Value="Properties/Screenshots/02_CrematoriumX.jpg" />
 	<Screenshot Value="Properties/Screenshots/03_Vehicles.jpg" />
 	<Screenshot Value="Properties/Screenshots/04_Options.jpg" />
-	<Tag Value="" />
+	<Tag Value="Code Mod" />
 	<ForumLink Value="" />
-	<ModVersion Value="1.1.1" />
+	<ModVersion Value="1.1.2" />
 	<GameVersion Value="1.2.*" />
 	<Dependency Id="" />
 	<ChangeLog>
-- Add BurstCompile job for better performance in large cities.
-- Fix unwanted recurvise pattern on vehicle name.
+- Rename vehicles from non-renamed buildings in now on by default.
+- Minor improvement to BurstCompile job for better performance, thanks to krzychu124 and yenyang.
 	</ChangeLog>
 	<ExternalLink Type="discord" Url="https://discord.gg/U2PSjUzUuF" />
 	<ExternalLink Type="github" Url="https://github.com/qstar-inc/cities2-AutoVehicleRenamer" />

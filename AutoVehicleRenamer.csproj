@@ -10,8 +10,8 @@
 		<Configurations>Debug;Release</Configurations>
 		<LangVersion>9</LangVersion>
 		<AssemblyName>AutoVehicleRenamer</AssemblyName>
-		<Title>Auto Vehicle Renamer</Title>
-		<Version>1.1.0</Version>
+		<AssemblyTitle>Auto Vehicle Renamer</AssemblyTitle>
+		<Version>1.1.2</Version>
 
 		<!--The file where mod information which is required for publishing mod on PDX mods are stored-->
 		<PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
