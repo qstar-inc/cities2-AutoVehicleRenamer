@@ -72,26 +72,25 @@ namespace AutoVehicleRenamer
             {
                 return null;
             }
-            Entity entity2 = Entity.Null;
-            if (base.EntityManager.TryGetComponent(entity, out PrefabRef prefabRef))
+            Entity prefabEntity = Entity.Null;
+            if (EntityManager.TryGetComponent(entity, out PrefabRef prefabRef))
             {
-                entity2 = prefabRef.m_Prefab;
+                prefabEntity = prefabRef.m_Prefab;
             }
 
-            if (!(entity2 != Entity.Null))
+            if (!(prefabEntity != Entity.Null))
             {
                 return string.Empty;
             }
 
-            if (!prefabSystem.TryGetPrefab(entity2, out PrefabBase prefabBase))
+            if (!prefabSystem.TryGetPrefab(prefabEntity, out PrefabBase prefabBase))
             {
-                return prefabSystem.GetObsoleteID(entity2).GetName();
+                return prefabSystem.GetObsoleteID(prefabEntity).GetName();
             }
 
             if (!prefabBase.TryGet(out Localization localization))
             {
-                prefabUISystem.GetTitleAndDescription(entity2, out string text, out _);
-                return text;
+                return $"Assets.NAME[{prefabBase.name}]";
             }
             return localization.m_LocalizationID;
         }
@@ -99,6 +98,10 @@ namespace AutoVehicleRenamer
         public string GetNameNonRecursive(Entity entity)
         {
             string id = GetId(entity);
+            if (id == null)
+            {
+                return string.Empty;
+            }
             if (
                 !GameManager.instance.localizationManager.activeDictionary.TryGetValue(
                     id,
@@ -125,7 +128,7 @@ namespace AutoVehicleRenamer
             int length = input.Length;
             while (length > 0)
             {
-                string truncated = input.Substring(0, length);
+                string truncated = input[..length];
                 if (utf8.GetByteCount(truncated) <= maxBytes)
                     return truncated;
 
@@ -144,9 +147,9 @@ namespace AutoVehicleRenamer
             string format = setting.TextFormat.ToString();
 
             FixedString32Bytes separator;
-            separator = new FixedString32Bytes("");
+            separator = new FixedString32Bytes(" ");
             separator.Append(new FixedString32Bytes(SanitizeStringToBytes(separatorStr, 6)));
-            separator.Append(new FixedString32Bytes(""));
+            separator.Append(new FixedString32Bytes(" "));
 
             EntityQuery query = all ? vehicleQueryAll : vehicleQuery;
             NativeArray<Entity> entities = query.ToEntityArray(Allocator.Temp);

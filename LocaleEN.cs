@@ -43,13 +43,10 @@ namespace AutoVehicleRenamer
                     m_Setting.GetOptionDescLocaleID(nameof(Setting.EnableDefault)),
                     $"By default, buildings with default names such as \"Bus Depot\" or \"Rail Yard\" won't be renamed. Enable this to allow renames of vehicles from buildings with default names."
                 },
-                {
-                    m_Setting.GetOptionLabelLocaleID(nameof(Setting.Separator)),
-                    "Choose a separator"
-                },
+                { m_Setting.GetOptionLabelLocaleID(nameof(Setting.Separator)), "Type a separator" },
                 {
                     m_Setting.GetOptionDescLocaleID(nameof(Setting.Separator)),
-                    $"Type what you want as the character(s) you want as the separator among the vehicle name and origin name. Using emoji or other unsupported characters might crash the game. To be safe, save first, then rename a vehicle manually, let the simulation run for a few seconds, save the game again on a separate file, exit the game, start the game, load the save, unpause the simulation, if this doesn't crash the game, you're good to go."
+                    $"Type what you want as the character(s) you want as the separator among the vehicle name and origin name. Using emoji or other unsupported characters might crash the game."
                 },
                 {
                     m_Setting.GetOptionLabelLocaleID(nameof(Setting.TextFormat)),

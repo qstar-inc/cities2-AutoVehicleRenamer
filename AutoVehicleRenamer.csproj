@@ -5,13 +5,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<OutputType>Library</OutputType>
-		<TargetFramework>net472</TargetFramework>
 		<Configurations>Debug;Release</Configurations>
-		<LangVersion>9</LangVersion>
+		
 		<AssemblyName>AutoVehicleRenamer</AssemblyName>
 		<AssemblyTitle>Auto Vehicle Renamer</AssemblyTitle>
-		<Version>1.1.2</Version>
+		<Version>1.1.3</Version>
+		<Authors>StarQ</Authors>
 
 		<!--The file where mod information which is required for publishing mod on PDX mods are stored-->
 		<PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
