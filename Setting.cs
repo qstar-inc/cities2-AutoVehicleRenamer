@@ -1,123 +1,121 @@
-﻿// AutoVehicleRenamer.cs
-// https://github.com/qstar-inc/cities2-AutoVehicleRenamer
-// StarQ 2024
-
-using System;
-using System.Collections.Generic;
+using AutoVehicleRenamer.Systems;
 using Colossal.IO.AssetDatabase;
+using Colossal.Json;
 using Game.Modding;
 using Game.Settings;
-using Game.UI.Widgets;
+using StarQ.Shared.Extensions;
 using Unity.Entities;
-using UnityEngine.Device;
 
 namespace AutoVehicleRenamer
 {
     [FileLocation("ModsSettings\\StarQ\\" + nameof(AutoVehicleRenamer))]
-    [SettingsUIGroupOrder(GeneralOptions, Actions)]
-    [SettingsUIShowGroupName(GeneralOptions, Actions)]
+    [SettingsUITabOrder(GeneralTab, AboutTab, LogTab)]
     public class Setting : ModSetting
     {
-        public const string MainSection = "Main";
-
-        public const string GeneralOptions = "General";
-        public const string Actions = "Actions";
-
-        public const string AboutTab = "About";
-        public const string InfoGroup = "Info";
-
-        public AutoVehicleRenamer avr =
-            World.DefaultGameObjectInjectionWorld.GetOrCreateSystemManaged<AutoVehicleRenamer>();
-
         public Setting(IMod mod)
-            : base(mod)
-        {
-            SetDefaults();
-        }
+            : base(mod) => SetDefaults();
 
+        public const string GeneralTab = "GeneralTab";
+        public const string GeneralGroup = "GeneralGroup";
+
+        public const string AboutTab = "AboutTab";
+        public const string InfoGroup = "InfoGroup";
+
+        public const string LogTab = "LogTab";
+
+        [Exclude]
         [SettingsUIHidden]
         public bool IsInGameOrEditor { get; set; } = false;
 
+        [Exclude]
+        [SettingsUIHidden]
+        public bool IsDetailedDescriptionsRunning { get; set; } = false;
+
         [SettingsUIButton]
-        [SettingsUISection(MainSection, Actions)]
+        [SettingsUISection(GeneralTab, GeneralGroup)]
         [SettingsUIDisableByCondition(typeof(Setting), nameof(IsInGameOrEditor), true)]
         public bool ApplyToAll
         {
-            set { avr.UpdateVehicleName(true); }
+            set =>
+                World
+                    .DefaultGameObjectInjectionWorld.GetOrCreateSystemManaged<AutoVehicleRenamerSystem>()
+                    .UpdateVehicleName(true);
         }
 
-        [SettingsUISection(MainSection, GeneralOptions)]
+        [SettingsUISection(GeneralTab, GeneralGroup)]
         public bool EnableDefault { get; set; }
 
         [SettingsUITextInput]
-        [SettingsUISection(MainSection, GeneralOptions)]
+        [SettingsUISection(GeneralTab, GeneralGroup)]
         public string Separator { get; set; } = string.Empty;
 
-        [SettingsUISection(MainSection, GeneralOptions)]
-        public TextFormatEnum TextFormat { get; set; } = TextFormatEnum.Value1;
-
-        public DropdownItem<int>[] GetIntDropdownItems()
-        {
-            var items = new List<DropdownItem<int>>();
-
-            for (var i = 0; i < 3; i += 1)
-            {
-                items.Add(new DropdownItem<int>() { value = i, displayName = i.ToString() });
-            }
-
-            return items.ToArray();
-        }
+        [SettingsUISection(GeneralTab, GeneralGroup)]
+        public TextFormatEnum TextFormat { get; set; } = TextFormatEnum.Vehicle_Separator_Building;
 
         public enum TextFormatEnum
         {
-            Value1,
-            Value2,
+            Vehicle_Separator_Building,
+            Building_Separator_Vehicle,
         }
 
         [SettingsUIButton]
         [SettingsUIConfirmation]
-        [SettingsUISection(MainSection, Actions)]
+        [SettingsUISection(GeneralTab, GeneralGroup)]
         public bool RestoreDefaults
         {
-            set { SetDefaults(); }
+            set => SetDefaults();
         }
-
-        [SettingsUISection(MainSection, Actions)]
-        public bool EnableVerbose { get; set; }
 
         public override void SetDefaults()
         {
             EnableDefault = true;
             Separator = "•";
-            TextFormat = TextFormatEnum.Value1;
-            EnableVerbose = false;
+            TextFormat = TextFormatEnum.Vehicle_Separator_Building;
         }
 
         [SettingsUISection(AboutTab, InfoGroup)]
         public string NameText => Mod.Name;
 
         [SettingsUISection(AboutTab, InfoGroup)]
-        public string VersionText => Mod.Version;
+        public string VersionText => VariableHelper.AddDevSuffix(Mod.Version);
 
         [SettingsUISection(AboutTab, InfoGroup)]
-        public string AuthorText => "StarQ";
+        public string AuthorText => VariableHelper.StarQ;
 
-        [SettingsUIButtonGroup("Social")]
         [SettingsUIButton]
+        [SettingsUIButtonGroup("Social")]
         [SettingsUISection(AboutTab, InfoGroup)]
         public bool BMaCLink
         {
-            set
-            {
-                try
-                {
-                    Application.OpenURL($"https://buymeacoffee.com/starq");
-                }
-                catch (Exception e)
-                {
-                    Mod.log.Info(e);
-                }
-            }
+            set => VariableHelper.OpenBMAC();
+        }
+
+        [SettingsUIButton]
+        [SettingsUIButtonGroup("Social")]
+        [SettingsUISection(AboutTab, InfoGroup)]
+        public bool Discord
+        {
+            set => VariableHelper.OpenDiscord("1234887506336682065");
+        }
+
+        [SettingsUIMultilineText]
+        [SettingsUIDisplayName(typeof(LogHelper), nameof(LogHelper.LogText))]
+        [SettingsUISection(LogTab, "")]
+        public string LogText => string.Empty;
+
+        [Exclude]
+        [SettingsUIHidden]
+        public bool IsLogMissing
+        {
+            get => VariableHelper.CheckLog(Mod.Id);
+        }
+
+        [SettingsUIButton]
+        [SettingsUIDisableByCondition(typeof(Setting), nameof(IsLogMissing))]
+        [SettingsUISection(LogTab, "")]
+        public bool OpenLog
+        {
+            set => VariableHelper.OpenLog(Mod.Id);
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿<Publish>
-	<ModId Value="79872" />
-	<DisplayName Value="Auto Vehicle Renamer" />
-	<ShortDescription Value="Automatically renames vehicles to include it's origin information on spawn" />
-	<LongDescription>
+<Publish>
+  <ModId Value="79872" />
+  <DisplayName Value="Auto Vehicle Renamer" />
+  <ShortDescription Value="Automatically renames vehicles to include it's origin information on spawn" />
+  <LongDescription>
 # Auto Vehicle Renamer
 This mod renames most vehicles with it's origin information when it spawns.
 
@@ -45,19 +45,19 @@ This mod renames most vehicles with it's origin information when it spawns.
 * Safe to add to existing save. (Button in Options can be used to rename all vehicles on the map)
 * Safe to remove anytime. (Existing renames will exist until the vehicle despawns)
 	</LongDescription>
-	<Thumbnail Value="Properties/Thumbnail.png" />
-	<Screenshot Value="Properties/Screenshots/02_CrematoriumX.jpg" />
-	<Screenshot Value="Properties/Screenshots/03_Vehicles.jpg" />
-	<Screenshot Value="Properties/Screenshots/04_Options.jpg" />
-	<Tag Value="Code Mod" />
-	<ForumLink Value="" />
-	<ModVersion Value="1.1.3" />
-	<GameVersion Value="1.3.3f1" />
-	<Dependency Id="" />
-	<ChangeLog>
-- Compatibility update for 1.3.3f1.
-- Fix for empty vehicle names causing errors.
+  <Thumbnail Value="Properties/Thumbnail.png" />
+  <Screenshot Value="Properties/Screenshots/02_CrematoriumX.jpg" />
+  <Screenshot Value="Properties/Screenshots/03_Vehicles.jpg" />
+  <Screenshot Value="Properties/Screenshots/04_Options.jpg" />
+  <Tag Value="Code Mod" />
+  <ForumLink Value="" />
+  <ModVersion Value="1.1.5" />
+  <GameVersion Value="1.3.6*" />
+  <Dependency Id="" />
+  <ChangeLog>
+- Recomplied for game version 1.3.6f1.
+- Unified localization system.
 	</ChangeLog>
-	<ExternalLink Type="discord" Url="https://discord.gg/U2PSjUzUuF" />
-	<ExternalLink Type="github" Url="https://github.com/qstar-inc/cities2-AutoVehicleRenamer" />
+  <ExternalLink Type="discord" Url="https://discord.gg/U2PSjUzUuF" />
+  <ExternalLink Type="github" Url="https://github.com/qstar-inc/cities2-AutoVehicleRenamer" />
 </Publish>
