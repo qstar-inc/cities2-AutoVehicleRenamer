@@ -1,0 +1,16 @@
+{
+  "AutoVehicleRenamer.StarQ_Option.ApplyToAll.Label": "Zastosuj do wszystkich pojazdów",
+  "AutoVehicleRenamer.StarQ_Option.EnableDefault.Label": "Zmień nazwę pojazdów z budynków o domyślnych nazwach",
+  "AutoVehicleRenamer.StarQ_Option.Separator.Label": "Wprowadź separator",
+  "AutoVehicleRenamer.StarQ_Option.TextFormat.Label": "Wybierz format tekstu",
+  "AutoVehicleRenamer.StarQ_Option.RestoreDefaults.Label": "Przywróć domyślne",
+  "AutoVehicleRenamer.Vehicle": "pojazd",
+  "AutoVehicleRenamer.Separator": "separator",
+  "AutoVehicleRenamer.Building": "budynek",
+  "AutoVehicleRenamer.StarQ_Option.ApplyToAll.Desc": "Zastosuj wybrane ustawienia do wszystkich pojazdów w bieżącym zapisie. Pomocne po zainstalowaniu moda po raz pierwszy lub po zmianie nazwy istniejącego budynku zajezdni/właściciela.",
+  "AutoVehicleRenamer.StarQ_Option.EnableDefault.Desc": "Pozwalaj na automatyczne zmienianie nazwy pojazdów z budynków o domyślnych nazwach.",
+  "AutoVehicleRenamer.StarQ_Option.Separator.Desc": "Wpisz znak(i), który chcesz użyć jako separator między nazwą pojazdu a nazwą właściciela. Używanie emoji lub innych niewspieranych znaków może spowodować crash.",
+  "AutoVehicleRenamer.StarQ_Option.TextFormat.Desc": "Wybierz jeden ze stylów formatowania tekstu używanego do zmiany nazwy.",
+  "AutoVehicleRenamer.StarQ_Option.RestoreDefaults.Desc": "Wyłącza zmianę nazwy pojazdów z budynków z domyślnymi nazwami, ustawia separator na <•> i format na <{AutoVehicleRenamer.Replacement.Vehicle_Separator_Building}>",
+  "AutoVehicleRenamer.StarQ_OptionWarning.RestoreDefaults": "Na pewno chcesz przywrócić domyślne ustawienia Auto Vehicle Renamer?"
+}

@@ -1,0 +1,16 @@
+{
+  "AutoVehicleRenamer.StarQ_Option.ApplyToAll.Label": "Aplicar a todos los vehículos",
+  "AutoVehicleRenamer.StarQ_Option.EnableDefault.Label": "Renombrar vehículos de edificios con nombres predeterminados",
+  "AutoVehicleRenamer.StarQ_Option.Separator.Label": "Escriba un separador",
+  "AutoVehicleRenamer.StarQ_Option.TextFormat.Label": "Elija un formato de texto",
+  "AutoVehicleRenamer.StarQ_Option.RestoreDefaults.Label": "Restaurar predeterminados",
+  "AutoVehicleRenamer.Vehicle": "vehículo",
+  "AutoVehicleRenamer.Separator": "separador",
+  "AutoVehicleRenamer.Building": "edificio",
+  "AutoVehicleRenamer.StarQ_Option.ApplyToAll.Desc": "Aplicar los ajustes seleccionados a todos los vehículos en el guardado actual. Es útil después de instalar el mod por primera vez o después de renombrar un edificio de depósito u origen.",
+  "AutoVehicleRenamer.StarQ_Option.EnableDefault.Desc": "Permitir renombrar los vehículos de edificios con nombres predeterminados.",
+  "AutoVehicleRenamer.StarQ_Option.Separator.Desc": "Escribe lo que quieras como carácter(es) que quieras como separador entre el nombre del vehículo y el nombre de origen. Usar emoji u otros caracteres no soportados podría hacer fallar el juego.",
+  "AutoVehicleRenamer.StarQ_Option.TextFormat.Desc": "Seleccione uno de los formatos de texto a utilizar en el renombrado.",
+  "AutoVehicleRenamer.StarQ_Option.RestoreDefaults.Desc": "Deshabilita el renombrar vehículos de edificios con nombres predeterminados, establece el separador en <•>, y establece el formato en <{AutoVehicleRenamer.Replacement.Vehicle_Separator_Building}>",
+  "AutoVehicleRenamer.StarQ_OptionWarning.RestoreDefaults": "¿Confirmar la restauración de los ajustes predeterminados para Auto Vehicle Renombre?"
+}

@@ -1,0 +1,16 @@
+{
+  "AutoVehicleRenamer.StarQ_Option.ApplyToAll.Label": "모든 탈것에 적용",
+  "AutoVehicleRenamer.StarQ_Option.EnableDefault.Label": "기본 이름을 가진 건물에서 탈것 이름 변경",
+  "AutoVehicleRenamer.StarQ_Option.Separator.Label": "구분 기호 입력",
+  "AutoVehicleRenamer.StarQ_Option.TextFormat.Label": "텍스트 형식 선택",
+  "AutoVehicleRenamer.StarQ_Option.RestoreDefaults.Label": "기본값 복원",
+  "AutoVehicleRenamer.Vehicle": "탈것",
+  "AutoVehicleRenamer.Separator": "구분 기호",
+  "AutoVehicleRenamer.Building": "건물",
+  "AutoVehicleRenamer.StarQ_Option.ApplyToAll.Desc": "현재 세이브 파일의 모든 탈것에 선택한 설정을 적용합니다. 모드를 처음 설치했거나 차고/출발지 건물의 이름을 변경한 후에 유용합니다.",
+  "AutoVehicleRenamer.StarQ_Option.EnableDefault.Desc": "기본 이름을 사용 중인 건물에서 생성된 탈것의 이름을 자동으로 변경하도록 허용합니다.",
+  "AutoVehicleRenamer.StarQ_Option.Separator.Desc": "탈것 이름과 출발지 이름 사이에 사용할 문자(들)를 입력하세요. 이모지나 지원되지 않는 문자를 사용하면 게임이 강제 종료될 수 있습니다.",
+  "AutoVehicleRenamer.StarQ_Option.TextFormat.Desc": "이름 변경에 사용할 텍스트 형식을 선택하세요.",
+  "AutoVehicleRenamer.StarQ_Option.RestoreDefaults.Desc": "기본 이름 건물 탈것의 이름 변경을 비활성화하고, 구분 기호를 <•>로, 형식을 <{AutoVehicleRenamer.Replacement.Vehicle_Separator_Building}>으로 설정합니다",
+  "AutoVehicleRenamer.StarQ_OptionWarning.RestoreDefaults": "탈것 이름 자동 변경 [Auto Vehicle Renamer]의 설정을 기본값으로 복원하시겠습니까?"
+}

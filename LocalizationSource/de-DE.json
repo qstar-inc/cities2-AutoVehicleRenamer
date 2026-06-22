@@ -1,0 +1,16 @@
+{
+  "AutoVehicleRenamer.StarQ_Option.ApplyToAll.Label": "Auf allen Fahrzeugen anwenden",
+  "AutoVehicleRenamer.StarQ_Option.EnableDefault.Label": "Fahrzeuge aus Gebäuden mit Standardnamen umbenennen",
+  "AutoVehicleRenamer.StarQ_Option.Separator.Label": "Trennzeichen eingeben",
+  "AutoVehicleRenamer.StarQ_Option.TextFormat.Label": "Ein Textformat auswählen",
+  "AutoVehicleRenamer.StarQ_Option.RestoreDefaults.Label": "Standard wiederherstellen",
+  "AutoVehicleRenamer.Vehicle": "Fahrzeug",
+  "AutoVehicleRenamer.Separator": "Trennzeichen",
+  "AutoVehicleRenamer.Building": "Gebäude",
+  "AutoVehicleRenamer.StarQ_Option.ApplyToAll.Desc": "Wendet die ausgewählten Einstellungen auf alle Fahrzeuge im aktuellen Spielstand an. Hilfreich nach der ersten Installation des Mods oder nach der Umbenennung eines bestehenden Depots/Ursprungsgebäudes.",
+  "AutoVehicleRenamer.StarQ_Option.EnableDefault.Desc": "Erlaubt die automatische Umbenennung von Fahrzeugen aus Gebäuden mit Standardnamen.",
+  "AutoVehicleRenamer.StarQ_Option.Separator.Desc": "Geben Sie das gewünschte Zeichen als Trennzeichen() zwischen Fahrzeugname und Herkunftsname ein. Die Verwendung von Emojis oder anderen nicht unterstützten Zeichen kann zum Absturz des Spiels führen.",
+  "AutoVehicleRenamer.StarQ_Option.TextFormat.Desc": "Wählen Sie eine der Textformatierungen aus, die Sie für die Umbenennung verwenden möchten.",
+  "AutoVehicleRenamer.StarQ_Option.RestoreDefaults.Desc": "Deaktiviert die Umbenennung von Fahrzeugen aus Gebäuden mit Standardnamen, setzt das Trennzeichen auf <•> und legt das Format auf <{AutoVehicleRenamer.Replacement.Vehicle_Separator_Building}> fest",
+  "AutoVehicleRenamer.StarQ_OptionWarning.RestoreDefaults": "Standard-Einstellungen für Auto Vehicle Renamer wiederherstellen?"
+}

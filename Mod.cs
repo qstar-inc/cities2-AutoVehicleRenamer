@@ -2,11 +2,9 @@ using System.Collections.Generic;
 using System.Reflection;
 using AutoVehicleRenamer.Systems;
 using Colossal.IO.AssetDatabase;
-using Colossal.Localization;
 using Colossal.Logging;
 using Game;
 using Game.Modding;
-using Game.SceneFlow;
 using StarQ.Shared.Extensions;
 
 namespace AutoVehicleRenamer
@@ -30,14 +28,8 @@ namespace AutoVehicleRenamer
 
         public void OnLoad(UpdateSystem updateSystem)
         {
-            LocalizationManager locMan = GameManager.instance.localizationManager;
             LogHelper.Init(Id, log);
             LocaleHelper.Init(Id, Name, GetReplacements, AddLocale);
-
-            foreach (var item in new LocaleHelper($"{Id}.Locale.json").GetAvailableLanguages())
-                locMan.AddSource(item.LocaleId, item);
-
-            locMan.onActiveDictionaryChanged += LocaleHelper.OnActiveDictionaryChanged;
 
             m_Setting = new Setting(this);
             m_Setting.RegisterInOptionsUI();
@@ -55,28 +47,26 @@ namespace AutoVehicleRenamer
 
         public void OnDispose()
         {
-            if (m_Setting != null)
-            {
-                m_Setting.UnregisterInOptionsUI();
-                m_Setting = null;
-            }
+            LocaleHelper.Dispose();
+            m_Setting?.UnregisterInOptionsUI();
+            m_Setting = null;
         }
 
         public static void AddLocale()
         {
-            var Building = LocaleHelper.Translate($"{Id}.Mod.Building");
-            var Separator = LocaleHelper.Translate($"{Id}.Mod.Separator");
-            var Vehicle = LocaleHelper.Translate($"{Id}.Mod.Vehicle");
+            string Building = LocaleHelper.Translate($"{Id}.Building");
+            string Separator = LocaleHelper.Translate($"{Id}.Separator");
+            string Vehicle = LocaleHelper.Translate($"{Id}.Vehicle");
             LocaleHelper.AddLocalization(
-                "Options.AutoVehicleRenamer.AutoVehicleRenamer.Mod.TEXTFORMATENUM[Building_Separator_Vehicle]",
+                $"Options.{Id}.{Id}.Mod.TEXTFORMATENUM[Building_Separator_Vehicle]",
                 $"{{{Building}}} {{{Separator}}} {{{Vehicle}}}"
             );
             LocaleHelper.AddLocalization(
-                "Options.AutoVehicleRenamer.AutoVehicleRenamer.Mod.TEXTFORMATENUM[Vehicle_Separator_Building]",
+                $"Options.{Id}.{Id}.Mod.TEXTFORMATENUM[Vehicle_Separator_Building]",
                 $"{{{Vehicle}}} {{{Separator}}} {{{Building}}}"
             );
             LocaleHelper.AddLocalization(
-                "Options.AutoVehicleRenamer.AutoVehicleRenamer.Mod.TEXTFORMATENUM[Building_Separator_Vehicle]",
+                $"Options.{Id}.{Id}.Mod.TEXTFORMATENUM[Building_Separator_Vehicle]",
                 $"{{{Building}}} {{{Separator}}} {{{Vehicle}}}"
             );
         }
@@ -88,7 +78,7 @@ namespace AutoVehicleRenamer
                 {
                     "Vehicle_Separator_Building",
                     LocaleHelper.Translate(
-                        "Options.AutoVehicleRenamer.AutoVehicleRenamer.Mod.TEXTFORMATENUM[Vehicle_Separator_Building]"
+                        $"Options.{Id}.{Id}.Mod.TEXTFORMATENUM[Vehicle_Separator_Building]"
                     )
                 },
             };

@@ -1,0 +1,16 @@
+{
+  "AutoVehicleRenamer.StarQ_Option.ApplyToAll.Label": "应用于所有载具",
+  "AutoVehicleRenamer.StarQ_Option.EnableDefault.Label": "使用默认名称重命名建筑物中的载具？",
+  "AutoVehicleRenamer.StarQ_Option.Separator.Label": "输入分隔符",
+  "AutoVehicleRenamer.StarQ_Option.TextFormat.Label": "选择文本格式",
+  "AutoVehicleRenamer.StarQ_Option.RestoreDefaults.Label": "恢复默认",
+  "AutoVehicleRenamer.Vehicle": "载具",
+  "AutoVehicleRenamer.Separator": "分隔符",
+  "AutoVehicleRenamer.Building": "建筑",
+  "AutoVehicleRenamer.StarQ_Option.ApplyToAll.Desc": "将所选设置应用于当前存档内的所有载具。此选项对于首次安装模组或重命名现有仓库/建筑后非常有用。",
+  "AutoVehicleRenamer.StarQ_Option.EnableDefault.Desc": "默认情况下，具有默认名称，例如“公交站”或“火车总站”的建筑物不会被重命名。启用此功能可允许重命名具有默认名称的建筑物中的载具。",
+  "AutoVehicleRenamer.StarQ_Option.Separator.Desc": "输入您想要的字符作为车辆名称和原始名称之间的分隔符。使用表情符号和（或）其他不受支持的字符可能会导致游戏崩溃。",
+  "AutoVehicleRenamer.StarQ_Option.TextFormat.Desc": "选择要在重命名脚本上使用的文本格式。",
+  "AutoVehicleRenamer.StarQ_Option.RestoreDefaults.Desc": "禁用按照默认名称的建筑物重命名载具的功能，将分隔符设置为“•”，并将格式设置为“{{vehicle}} {{separator}} {{building}}”",
+  "AutoVehicleRenamer.StarQ_OptionWarning.RestoreDefaults": "确认还原载具自动命名模组默认设置？"
+}

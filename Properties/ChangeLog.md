@@ -1,0 +1,2 @@
+- Fix repeated calls to log files (thanks to elGendo).
+- Updated translation format.

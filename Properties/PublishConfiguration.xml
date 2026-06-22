@@ -1,13 +1,12 @@
 <Publish>
   <ModId Value="79872" />
   <DisplayName Value="Auto Vehicle Renamer" />
-  <ShortDescription Value="Automatically renames vehicles to include it's origin information on spawn" />
-  <LongDescription>
-# Auto Vehicle Renamer
-This mod renames most vehicles with it's origin information when it spawns.
+  <ShortDescription Value="Automatically renames vehicles to include their origin information on spawn" />
+  <LongDescription># Auto Vehicle Renamer
+Automatically renames vehicles to include their origin information on spawn.
 
 ## Features
-* Automatically renames vehicles from buildings with custom names or from outside connections
+* Renames vehicles from buildings with custom names or from outside connections
 * Optional renaming of vehicles from buildings with default names
 * Customizable separator
 * Selectable formatting
@@ -43,21 +42,21 @@ This mod renames most vehicles with it's origin information when it spawns.
 
 ## DISCLAIMER
 * Safe to add to existing save. (Button in Options can be used to rename all vehicles on the map)
-* Safe to remove anytime. (Existing renames will exist until the vehicle despawns)
-	</LongDescription>
+* Safe to remove anytime. (Existing renames will exist until the vehicle despawns)</LongDescription>
   <Thumbnail Value="Properties/Thumbnail.png" />
   <Screenshot Value="Properties/Screenshots/02_CrematoriumX.jpg" />
   <Screenshot Value="Properties/Screenshots/03_Vehicles.jpg" />
   <Screenshot Value="Properties/Screenshots/04_Options.jpg" />
   <Tag Value="Code Mod" />
   <ForumLink Value="" />
-  <ModVersion Value="1.1.5" />
-  <GameVersion Value="1.3.6*" />
+  <ModVersion Value="1.2.0" />
+  <GameVersion Value="1.5*" />
   <Dependency Id="" />
-  <ChangeLog>
-- Recomplied for game version 1.3.6f1.
-- Unified localization system.
-	</ChangeLog>
-  <ExternalLink Type="discord" Url="https://discord.gg/U2PSjUzUuF" />
+  <ChangeLog>- Fix repeated calls to log files (thanks to elGendo).
+- Updated translation format.</ChangeLog>
   <ExternalLink Type="github" Url="https://github.com/qstar-inc/cities2-AutoVehicleRenamer" />
+  <ExternalLink Type="discord" Url="https://discord.gg/U2PSjUzUuF" />
+  <ExternalLink Type="buymeacoffee" Url="https://buymeacoffee.com/starq" />
+  <ExternalLink Type="crowdin" Url="https://crowdin.com/project/starq-cities2" />
+  <AccessLevel Value="Public" />
 </Publish>
